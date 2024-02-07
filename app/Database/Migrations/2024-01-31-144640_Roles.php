@@ -11,6 +11,7 @@ class Roles extends Migration
         // Membuat kolom/field untuk tabel news
         $this->forge->addField([
             'id' => ['type'  => 'INT', 'constraint' => 5, 'unsigned' => true, 'auto_increment' => true],
+            'role' => ['type' => 'VARCHAR',  'constraint' => '5'],
             'name' => ['type' => 'VARCHAR',  'constraint' => '255'],
         ]);
 

@@ -10,15 +10,15 @@ class Users extends Model
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
+    protected $useSoftDeletes   = true;
     protected $protectFields    = true;
     // protected $allowedFields    = [];
-    protected $allowedFields = ['name', 'username', 'password', 'role_id'];
+    protected $allowedFields = ['name', 'username', 'email', 'password', 'role'];
 
     protected bool $allowEmptyInserts = false;
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

@@ -10,10 +10,10 @@ class Roles extends Model
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
+    protected $useSoftDeletes   = true;
     protected $protectFields    = true;
     // protected $allowedFields    = [];
-    protected $allowedFields = ['id', 'name'];
+    protected $allowedFields = ['id', 'role', 'name'];
 
     protected bool $allowEmptyInserts = false;
 
