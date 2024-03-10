@@ -9,15 +9,19 @@ use CodeIgniter\Router\RouteCollection;
 
 
 //untuk group route sekolah
-$routes->group('auth', function ($r) {
+$routes->group('', function ($r) {
     $r->get('login', 'Auth::login');
-    $r->post('login', 'Auth::processLogin');
     $r->get('register', 'Auth::register');
+});
+//untuk group route sekolah
+$routes->group('auth', function ($r) {
+    $r->post('login', 'Auth::processLogin');
     $r->post('register', 'Auth::processRegister');
+    $r->get('logout', 'Auth::processLogout');
 });
 
 $routes->group('', ['filter' => 'auth'], function ($routes) {
-    $routes->get('/', 'Home::index');
+    $routes->get('/dashboard', 'Home::index');
 
     $routes->get('/users', 'Users::index', ['as' => 'users']);
     $routes->get('/users/create', 'Users::create');

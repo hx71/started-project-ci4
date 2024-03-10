@@ -4,16 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Roles extends Model
+class Level extends Model
 {
-    protected $table            = 'roles';
+    protected $table            = 'level';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
-    protected $useSoftDeletes   = true;
+    protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    // protected $allowedFields    = [];
-    protected $allowedFields = ['id', 'role', 'name'];
+    protected $allowedFields    = ['id', 'kode', 'nama_level'];
 
     protected bool $allowEmptyInserts = false;
 

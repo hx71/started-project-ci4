@@ -15,7 +15,7 @@ class Users extends Migration
             'username' => ['type' => 'VARCHAR',  'constraint' => '255'],
             'email' => ['type' => 'VARCHAR',  'constraint' => '255'],
             'password' => ['type' => 'VARCHAR',  'constraint' => '255'],
-            'role' => ['type' => 'VARCHAR',  'constraint' => '255'],
+            'level' => ['type' => 'VARCHAR',  'constraint' => '255'],
             'created_at' => ['type' => 'DATETIME', 'null' => true],
             'updated_at' => ['type' => 'DATETIME', 'null' => true],
             'deleted_at' => ['type' => 'DATETIME', 'null' => true],

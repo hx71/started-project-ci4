@@ -29,17 +29,17 @@
                             <div class="brand-logo">
                                 <img src="<?= base_url('asset/'); ?>images/logo.svg" alt="logo">
                             </div>
-                            <h4>Hello! let's get started</h4>
-                            <h6 class="font-weight-light">Sign in to continue.</h6>
-                            <form class="pt-3">
+                            <h4>Silahkan Login</h4>
+                            <!-- <h6 class="font-weight-light">Sign in to continue.</h6> -->
+                            <form class="pt-3" action="<?= base_url('auth/login'); ?>" method="POST">
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                                    <input type="text" name="username" class="form-control form-control-lg" id="" placeholder="Username">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                                    <input type="password" name="password" class="form-control form-control-lg" id="" placeholder="Password">
                                 </div>
                                 <div class="mt-3">
-                                    <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="<?= base_url('asset/'); ?>index.html">SIGN IN</a>
+                                    <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">Masuk</button>
                                 </div>
                                 <!-- <div class="my-2 d-flex justify-content-between align-items-center">
                                     <div class="form-check">
@@ -51,7 +51,7 @@
                                     <a href="#" class="auth-link text-black">Forgot password?</a>
                                 </div> -->
                                 <div class="text-center mt-4 font-weight-light">
-                                    Don't have an account? <a href="<?= base_url('auth/register'); ?>" class="text-primary">Register</a>
+                                    Sudah Punya Akun? <a href="<?= base_url('auth/register'); ?>" class="text-primary">Daftar</a>
                                 </div>
                             </form>
                         </div>
@@ -64,16 +64,16 @@
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
-    <script src="<?= base_url('asset/'); ?>vendors/js/vendor.bundle.base.js"></script>
+    <!-- <script src="<?= base_url('asset/'); ?>vendors/js/vendor.bundle.base.js"></script> -->
     <!-- endinject -->
     <!-- Plugin js for this page -->
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="<?= base_url('asset/'); ?>js/off-canvas.js"></script>
-    <script src="<?= base_url('asset/'); ?>js/hoverable-collapse.js"></script>
-    <script src="<?= base_url('asset/'); ?>js/template.js"></script>
-    <script src="<?= base_url('asset/'); ?>js/settings.js"></script>
-    <script src="<?= base_url('asset/'); ?>js/todolist.js"></script>
+    <!-- <script src="<?= base_url('asset/'); ?>js/off-canvas.js"></script> -->
+    <!-- <script src="<?= base_url('asset/'); ?>js/hoverable-collapse.js"></script> -->
+    <!-- <script src="<?= base_url('asset/'); ?>js/template.js"></script> -->
+    <!-- <script src="<?= base_url('asset/'); ?>js/settings.js"></script> -->
+    <!-- <script src="<?= base_url('asset/'); ?>js/todolist.js"></script> -->
     <!-- endinject -->
 </body>
 

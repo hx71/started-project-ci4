@@ -15,17 +15,13 @@ class Auth extends BaseController
         $this->title = "auth";
         $this->modelUsers = new Users();
     }
-    public function login(): string
+    public function login()
     {
         return view('auth/login');
     }
 
     public function processLogin()
     {
-        $date = date('Ymd');
-        if ($date > '20240215') {
-            return redirect()->to('/auth/login');
-        }
         //ambil data dari form
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
@@ -39,12 +35,11 @@ class Auth extends BaseController
             if (password_verify($password, $user['password'])) {
                 session()->set([
                     'username' => $user['username'],
-                    'nama' => $user['nama'],
-                    'role' => $user['role'],
-                    'sekolah_id' => $user['sekolah_id'],
+                    'nama' => $user['name'],
+                    'level' => $user['level'],
                     'islogin' => TRUE
                 ]);
-                return redirect()->to('/');
+                return redirect()->to('/dashboard');
             } else {
                 return redirect()->to('/auth/login');
             }
@@ -73,5 +68,11 @@ class Auth extends BaseController
             return redirect()->to('/auth/login');
         }
         return redirect()->to('/auth/register');
+    }
+
+    public function processLogout()
+    {
+        session()->destroy();
+        return redirect()->to('/login');
     }
 }
